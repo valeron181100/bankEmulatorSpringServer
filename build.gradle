@@ -1,0 +1,27 @@
+plugins {
+	id 'org.springframework.boot' version '2.4.5'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.kickstarter'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation group: 'org.json', name: 'json', version: '20210307'
+	implementation group: 'org.springdoc', name: 'springdoc-openapi-ui', version: '1.5.7'
+	implementation group: 'org.springdoc', name: 'springdoc-openapi-data-rest', version: '1.5.7'
+	implementation group: 'io.swagger', name: 'swagger-annotations', version: '1.5.0'
+}
+
+test {
+	useJUnitPlatform()
+}
